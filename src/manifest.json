@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Phytonic",
+    "version": "0.1",
+    "author": "David Barragán Merino (@bameda)",
+    "description": "A funny Chrome extension to correct typos with the Phyton programming language name",
+    "homepage_url": "https://github.com/bameda/chrome-ext-phytonic",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png",
+        "256": "icons/icon256.png"
+    },
+    "browser_action": {
+        "default_icon": "icons/icon48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["libs/findAndReplaceDOMText.js", "content.js"]
+        }
+    ]
+}
